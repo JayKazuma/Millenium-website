@@ -11,8 +11,10 @@ const Header = () => {
 
   return (
     <header className="bg-gradient-to-r from-green-800/30 via-blue-600/30 to-red-700/30 shadow-md fixed w-full z-50">
+      
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-center">
+          
 
           {/* Centered Navigation for Desktop */}
           <nav className="hidden md:flex items-center gap-8">

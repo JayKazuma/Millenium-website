@@ -84,7 +84,7 @@ const Machineries = () => {
                                 </Swiper>
 
                                 {/* ✅ Fixed Pagination Styling */}
-                                <div className="custom-pagination absolute bottom-4 w-full flex justify-center space-x-2"></div>
+                                <div className="custom-pagination absolute bottom-4 w-full flex justify-center pt-0.5 pb-0.5"></div>
 
                                 {/* ✅ Improved Navigation Buttons */}
                                 <button className="swiper-button-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-4 rounded-full shadow-lg hover:bg-white/60 hover:text-black transition duration-300 ease-in-out">
