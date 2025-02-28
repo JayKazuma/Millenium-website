@@ -46,15 +46,13 @@ const Machineries = () => {
                             {/* Title Section */}
                             <div className="mt-24">
                                 <h1 className="text-5xl font-bold text-white drop-shadow-md">
-                                    Product <span className="text-yellow-400">Samples</span>
+                                    Our <span className="text-yellow-400">Machines</span>
                                 </h1>
-                                <p className="text-white mt-2 text-lg drop-shadow-md">
-                                    High-quality precision parts designed for performance.
-                                </p>
+                                
                             </div>
 
                             {/* Swiper Container */}
-                            <div className="relative w-full max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-8">
+                            <div className="relative w-165 max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-0.5">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
                                     navigation={{
@@ -65,7 +63,7 @@ const Machineries = () => {
                                         el: ".custom-pagination",
                                         clickable: true,
                                     }}
-                                    className="w-full pb-12" // Added padding to prevent overlap
+                                    className="w-full pb-12" 
                                 >
                                     {machines.map((machine, index) => (
                                         <SwiperSlide key={index}>

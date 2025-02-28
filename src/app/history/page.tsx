@@ -69,7 +69,22 @@ const History = () => {
                                     <p className="mt-2 text-gray-600">
                                         At present a total of forty seven (47) machineries and is engaged in CNC ma
                                         production items, precision jigs and fixture, tools and dies, machine parts and
-                                        moulds as major products. 
+                                        moulds as major products. <br />
+
+                                        MTFSI line of business includes manufacturing of
+                                        precision and semi-precision components for semiconductors, electronics,
+                                        laboratories, automotive industries and other related parts and components. It
+                                        also provides customer support and engineering on products and services
+                                        needed in the manufacturing and retrofitting of various machine tools and
+                                        spare parts. MTFSI offers contract precision machining jobs and other needs
+                                        as required by its diverse customers from electronics and semi conductor
+                                        industries, automotive, food manufacturing and type of business needs. MTFSI
+                                        also offers civil and mechanical works, and painting jobs.
+                                        The management of the company believes that affordable price ,
+                                        conformance to the specification of the customers, precise delivery schedule
+                                        , reliable and dependable supplier are the keys for effectively serving the design
+                                        and fabrication, precision and semi-precision toolings, jigs & fixtures and die
+                                        set parts needs of many companies. 
                                     </p>
                                 </div>
                                 

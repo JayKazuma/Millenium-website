@@ -60,14 +60,46 @@ const SampleProducts = () => {
 
     // Fabrication Samples Data
     const fabricationSamples = [
-        { name: "WELDED FRAME", image: "/f1.png" },
-        { name: "CNC MACHINED PART", image: "/f2.png" },
-        { name: "CUSTOM FIXTURE", image: "/f3.png" },
-        { name: "METAL FORMING PART", image: "/f4.png" },
+        { name: "", image: "/f1.png" },
+        { name: "", image: "/f2.png" },
+        { name: "", image: "/f3.png" },
+        { name: "", image: "/f4.png" },
+        { name: "", image: "/f5.png" },
+        { name: "", image: "/f6.png" },
+        { name: "", image: "/f7.png" },
+        { name: "", image: "/f8.png" },
+        { name: "", image: "/f9.png" },
+        { name: "", image: "/f10.png" },
+        { name: "", image: "/f11.png" },
+        { name: "", image: "/f12.png" },
+        { name: "", image: "/f13.png" },
+        { name: "", image: "/f14.png" },
+        { name: "", image: "/f15.png" },
+        { name: "", image: "/f16.png" },
+        { name: "", image: "/f17.png" },
+        { name: "", image: "/f18.png" },
+        { name: "", image: "/f19.png" },
+        { name: "", image: "/f20.png" },
+    ];
+
+    const rubberSamples = [
+        { name: "Silicon Rubber Fixture", image: "/r1.png" },
+        { name: "Silicon Ferule Gasket", image: "/r2.png" },
+        { name: "Rubber Seal & Seal Ring", image: "/r3.png" },
+        { name: "Silicon Suction Cup w/ Bronze", image: "/r4.png" },
+        { name: "Silicon O-Ring Rubber", image: "/r5.png" },
+        { name: "Silicon Suction Cup", image: "/r6.png" },
+        { name: "Silicon D-Rubber", image: "/r7.png" },
+        { name: "Rubber Spacer", image: "/r8.png" },
     ];
 
     // Determine which set of images to display
-    const samples = activeTab === "product" ? productSamples : fabricationSamples;
+    const samples = activeTab === "product"
+        ? productSamples
+        : activeTab === "fabrication"
+            ? fabricationSamples
+            : rubberSamples; // Correctly selects rubberSamples
+ 
 
     return (
         <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen h-screen overflow-hidden">
@@ -108,10 +140,19 @@ const SampleProducts = () => {
                                 >
                                     Fabrication Samples
                                 </button>
+                                <button
+                                    onClick={() => setActiveTab("rubber")}
+                                    className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === "rubber"
+                                        ? "bg-yellow-400 text-black"
+                                        : "bg-white/20 text-white"
+                                        }`}
+                                >
+                                    Rubber Samples
+                                </button>
                             </div>
 
                             {/* Swiper Container */}
-                            <div className="relative w-150 max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-2">
+                            <div className="relative w-165 max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-2">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
                                     navigation={{

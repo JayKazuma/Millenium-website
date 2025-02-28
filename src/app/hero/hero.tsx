@@ -7,8 +7,8 @@ const Hero = () => {
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <section className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat">
-            <div className="relative bg-[url('/HEXAGON.png')] bg-contain bg-center bg-no-repeat">
+        <section className="relative flex flex-col min-h-screen bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat">
+            <div className="relative flex-grow bg-[url('/HEXAGON.png')] bg-contain bg-center bg-no-repeat">
                 {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
                 {loaded && (
                     <>
@@ -16,8 +16,8 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-black/60"></div>
 
                         {/* Hero Content with Border */}
-                        <div className="relative mx-auto max-w-screen-xl px-6 py-32 sm:px-12 lg:flex lg:h-screen lg:items-center lg:px-16">
-                            <div className="max-w-2xl text-center sm:text-left border border-gray-700 rounded-lg p-6 mt-6 bg-black/40">
+                        <div className="relative mx-auto max-w-screen-xl px-6 py-32 sm:px-12 flex flex-col lg:justify-center lg:flex-grow lg:px-16">
+                            <div className="max-w-2xl text-center sm:text-left border border-gray-700 rounded-lg p-6 bg-black/40">
                                 <h1 className="text-6xl font-extrabold text-white sm:text-7xl leading-tight">
                                     <span className="bg-gradient-to-r from-green-400 via-blue-500 to-red-500 bg-clip-text text-transparent">
                                         MILLENIUM
@@ -41,7 +41,7 @@ const Hero = () => {
                                         beyond their expectations through reinforced partnership with our own
                                         suppliers and our most valuable resources - our manpower / personnel ,
                                         providing a smooth and stimulating working environment, rewarding benefits
-                                        coupled with dignity,
+                                        coupled with dignity.
                                     </p>
                                 </div>
                             </div>
