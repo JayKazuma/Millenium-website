@@ -13,9 +13,10 @@ import Footer from "../footer/footer";
 
 const SampleProducts = () => {
     const [loaded, setLoaded] = useState(false);
+    const [activeTab, setActiveTab] = useState("product"); // Track which tab is selected
 
-    // Product data
-    const products = [
+    // Product Samples Data
+    const productSamples = [
         { name: "INSPECTION JIG", image: "/p1.png" },
         { name: "DEFLASH PUNCH", image: "/p2.png" },
         { name: "PRECISION & SEMI-PRECISION PARTS", image: "/p3.png" },
@@ -40,16 +41,33 @@ const SampleProducts = () => {
         { name: "PULLEYS ", image: "/p22.png" },
         { name: "POLISHING OF DIE ", image: "/p23.png" },
         { name: "SEMICON MACHINE PARTS ", image: "/p24.png" },
-        { name: "SEMICON MACHINE PARTS", image: "/p25.png" },
-        { name: "SEMICON MACHINE PARTS", image: "/p26.png" },
-        { name: "SEMICON MACHINE PARTS", image: "/p27.png" },
-        { name: "SEMICON MACHINE PARTS", image: "/p28.png" },
-        { name: "SEMICON MACHINE PARTS ", image: "/p29.png" },
-        { name: "SEMICON MACHINE PARTS", image: "/p30.png" },
-        { name: "SEMICON MACHINE PARTS", image: "/p31.png" },
-        { name: "SEMICON MACHINE PARTS ", image: "/p32.png" },
-        { name: "SEMICON MACHINE PARTS ", image: "/p33.png" },
+        { name: "", image: "/p25.png" },
+        { name: "", image: "/p26.png" },
+        { name: "", image: "/p27.png" },
+        { name: "", image: "/p28.png" },
+        { name: "", image: "/p29.png" },
+        { name: "", image: "/p30.png" },
+        { name: "", image: "/p31.png" },
+        { name: "", image: "/p32.png" },
+        { name: " ", image: "/p33.png" },
+        { name: "", image: "/p34.png" },
+        { name: "", image: "/p35.png" },
+        { name: "", image: "/p36.png" },
+        { name: "", image: "/p37.png" },
+        { name: "", image: "/p38.png" },
+        
     ];
+
+    // Fabrication Samples Data
+    const fabricationSamples = [
+        { name: "WELDED FRAME", image: "/f1.png" },
+        { name: "CNC MACHINED PART", image: "/f2.png" },
+        { name: "CUSTOM FIXTURE", image: "/f3.png" },
+        { name: "METAL FORMING PART", image: "/f4.png" },
+    ];
+
+    // Determine which set of images to display
+    const samples = activeTab === "product" ? productSamples : fabricationSamples;
 
     return (
         <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen h-screen overflow-hidden">
@@ -63,17 +81,37 @@ const SampleProducts = () => {
 
                         <div className="flex flex-col justify-center items-center text-center h-full px-4">
                             {/* Title Section */}
-                            <div className="mt-24">
-                                <h1 className="text-5xl font-bold text-white drop-shadow-md">
-                                    Product <span className="text-yellow-400">Samples</span>
-                                </h1>
-                                <p className="text-white mt-2 text-lg drop-shadow-md">
-                                    High-quality precision parts designed for performance.
-                                </p>
+                            <div className="mt-20">
+                                <h2 className="text-5xl font-bold text-white drop-shadow-md">
+                                    Sample <span className="text-yellow-400">Gallery</span>
+                                </h2>
+                                
+                            </div>
+
+                            {/* Tab Navigation */}
+                            <div className="flex space-x-4 mt-0.5 bg-white/10 backdrop-blur-md p-2 rounded-xl shadow-lg">
+                                <button
+                                    onClick={() => setActiveTab("product")}
+                                    className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === "product"
+                                        ? "bg-yellow-400 text-black"
+                                        : "bg-white/20 text-white"
+                                        }`}
+                                >
+                                    Product Samples
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab("fabrication")}
+                                    className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === "fabrication"
+                                        ? "bg-yellow-400 text-black"
+                                        : "bg-white/20 text-white"
+                                        }`}
+                                >
+                                    Fabrication Samples
+                                </button>
                             </div>
 
                             {/* Swiper Container */}
-                            <div className="relative w-full max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-8">
+                            <div className="relative w-150 max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-2">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
                                     navigation={{
@@ -84,28 +122,28 @@ const SampleProducts = () => {
                                         el: ".custom-pagination",
                                         clickable: true,
                                     }}
-                                    className="w-full pb-12" // Added padding to prevent overlap
+                                    className="w-full pb-12"
                                 >
-                                    {products.map((product, index) => (
+                                    {samples.map((sample, index) => (
                                         <SwiperSlide key={index}>
                                             <div className="flex flex-col justify-center items-center">
                                                 <img
-                                                    src={product.image}
-                                                    alt={product.name}
+                                                    src={sample.image}
+                                                    alt={sample.name}
                                                     className="w-full h-[50vh] object-contain rounded-lg shadow-md"
                                                 />
                                                 <h3 className="text-2xl font-semibold text-white mt-4 drop-shadow-md">
-                                                    {product.name}
+                                                    {sample.name}
                                                 </h3>
                                             </div>
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
 
-                                
+                                {/* Pagination */}
                                 <div className="custom-pagination absolute bottom-4 w-full flex justify-center space-x-2 pb-0.5 pt-0.5"></div>
 
-                                
+                                {/* Navigation Buttons */}
                                 <button className="swiper-button-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-4 rounded-full shadow-lg hover:bg-white/60 hover:text-black transition duration-300 ease-in-out">
                                     ❮
                                 </button>
