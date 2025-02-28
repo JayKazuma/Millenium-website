@@ -72,25 +72,8 @@ const History = () => {
                                         moulds as major products. 
                                     </p>
                                 </div>
-                                <div className="bg-white shadow-lg rounded-lg p-6 border-l-4 border-purple-500">
-                                    <h3 className="text-2xl font-semibold text-gray-700">OUR MISSION</h3>
-                                    <p className="mt-2 text-gray-600">
-                                        To satisfy our valued customer by delivering world class quality products
-                                        and services at the most reasonable cost, in the most appropriate time
-                                        beyond their expectations through reinforced partnership with our own
-                                        suppliers and our most valuable resources - our manpower / personnel ,
-                                        providing a smooth and stimulating working environment, rewarding benefits
-                                        coupled with dignity, 
-                                    </p>
-                                </div>
-                                <div className="bg-white shadow-lg rounded-lg p-6 border-l-4 border-purple-500">
-                                    <h3 className="text-2xl font-semibold text-gray-700">OUR VISION</h3>
-                                    <p className="mt-2 text-gray-600">
-                                        To be recognized as most preferred SUPPLIER / PARTNER of our valued
-                                        customers in delivering our whole range of products and services beyond our
-                                        capacity.
-                                    </p>
-                                </div>
+                                
+                                
                             </div>
                         </div>
                     </section>

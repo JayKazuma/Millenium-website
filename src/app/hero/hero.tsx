@@ -26,10 +26,24 @@ const Hero = () => {
                                 <h2 className="text-3xl font-semibold text-gray-300 mt-2">
                                     Toolings & Fabrication Inc.
                                 </h2>
-                                <p className="mt-6 text-lg text-gray-200 sm:text-xl leading-relaxed">
-                                    Delivering precision engineering & top-tier fabrication solutions to
-                                    industries. Innovation meets craftsmanship.
-                                </p>
+                                <div className="pt-5">
+                                    <h3 className="text-2xl font-semibold text-white text-center">OUR VISION</h3>
+                                    <p className="mt-2 text-white">
+                                        To be recognized as most preferred SUPPLIER / PARTNER of our valued
+                                        customers in delivering our whole range of products and services beyond our
+                                        capacity.
+                                    </p>
+
+                                    <h3 className="text-2xl font-semibold text-white text-center">OUR MISSION</h3>
+                                    <p className="mt-2 text-white">
+                                        To satisfy our valued customer by delivering world class quality products
+                                        and services at the most reasonable cost, in the most appropriate time
+                                        beyond their expectations through reinforced partnership with our own
+                                        suppliers and our most valuable resources - our manpower / personnel ,
+                                        providing a smooth and stimulating working environment, rewarding benefits
+                                        coupled with dignity,
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </>
