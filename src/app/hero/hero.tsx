@@ -4,7 +4,7 @@ import React from "react";
 import Loading from "../loading/loading";
 import { useState } from "react";
 import Footer from "../footer/footer";
-export const Hero = () => {
+const Hero = () => {
     const [loaded, setLoaded] = useState(false);
     return (
 

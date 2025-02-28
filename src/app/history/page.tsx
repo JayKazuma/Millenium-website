@@ -5,7 +5,7 @@ import Header from "../header/header";
 import Loading from "../loading/loading";
 import Footer from "../footer/footer";
 
-export const History = () => {
+const History = () => {
     const [loaded, setLoaded] = useState(false);
 
     return (

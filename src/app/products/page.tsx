@@ -11,7 +11,7 @@ import Header from "../header/header";
 import Loading from "../loading/loading";
 import Footer from "../footer/footer";
 
-export const SampleProducts = () => {
+const SampleProducts = () => {
     const [loaded, setLoaded] = useState(false);
 
     // Product data

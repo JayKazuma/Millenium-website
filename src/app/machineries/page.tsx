@@ -11,7 +11,7 @@ import Header from "../header/header";
 import Loading from "../loading/loading";
 import Footer from "../footer/footer";
 
-export const Machineries = () => {
+const Machineries = () => {
     const [loaded, setLoaded] = useState(false);
 
     const machines = [
