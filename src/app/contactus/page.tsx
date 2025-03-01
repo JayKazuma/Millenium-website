@@ -4,7 +4,13 @@ import React, { useState } from "react";
 import Header from "../header/header";
 import Loading from "../loading/loading";
 
-const contactItems = [
+interface ContactItemProps {
+    href: string;
+    label: string;
+    iconPath: string;
+}
+
+const contactItems: ContactItemProps[] = [
     {
         href: "https://www.facebook.com/milleniumtoolings",
         label: "Visit our Facebook Page",
@@ -27,27 +33,21 @@ const contactItems = [
     },
 ];
 
-type ContactItemProps = {
-    href: string;
-    label: string;
-    iconPath: string;
-};
-
 const ContactItem: React.FC<ContactItemProps> = ({ href, label, iconPath }) => (
     <a
         href={href}
         target="_blank"
         rel="noreferrer"
-        className="flex flex-col items-center justify-center text-gray-200 hover:text-green-400 transition p-3 bg-white/10 rounded-lg shadow-md hover:bg-white/20 w-24 sm:w-32 h-24 sm:h-32"
+        className="flex flex-col items-center justify-center text-gray-100 hover:text-green-400 transition p-4 bg-white/10 rounded-lg shadow-md hover:bg-white/20 w-28 sm:w-36 h-28 sm:h-36"
     >
-        <svg className="w-8 h-8 sm:w-10 sm:h-10 mb-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg className="w-10 h-10 sm:w-12 sm:h-12 mb-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path fillRule="evenodd" d={iconPath} clipRule="evenodd" />
         </svg>
-        <span className="text-sm sm:text-base text-center">{label}</span>
+        <span className="text-sm sm:text-base text-center font-medium">{label}</span>
     </a>
 );
 
-const ContactUs = () => {
+const ContactUs: React.FC = () => {
     const [loaded, setLoaded] = useState(false);
 
     return (
@@ -58,16 +58,18 @@ const ContactUs = () => {
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
                 <section className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat">
-                    <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="absolute inset-0 bg-black/75"></div>
                     <div className="relative flex flex-col items-center">
                         <h1 className="text-5xl font-bold text-green-500 sm:text-6xl">
                             Contact <span className="text-red-500">Us!</span>
                         </h1>
-                        <p className="mt-2 text-xl sm:text-2xl">Millenium Toolings & Fabrication Inc.</p>
+                        <p className="mt-3 text-xl sm:text-2xl text-gray-300">
+                            Millenium Toolings & Fabrication Inc.
+                        </p>
                     </div>
 
                     {/* Contact Info Grid */}
-                    <div className="relative z-10 grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10">
+                    <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12">
                         {contactItems.map((item, index) => (
                             <ContactItem key={index} {...item} />
                         ))}

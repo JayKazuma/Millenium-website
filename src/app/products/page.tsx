@@ -102,67 +102,46 @@ const SampleProducts = () => {
  
 
     return (
-        <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen h-screen overflow-hidden">
+        <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col">
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
                 <>
                     <div className="absolute inset-0 bg-black/60"></div>
-
                     <div className="relative z-10 flex flex-col justify-between h-full">
                         <Header />
 
-                        <div className="flex flex-col justify-center items-center text-center h-full px-4">
-                            {/* Title Section */}
-                            <div className="mt-20">
-                                <h2 className="text-5xl font-bold text-white drop-shadow-md">
-                                    Sample <span className="text-yellow-400">Gallery</span>
-                                </h2>
-                                
-                            </div>
+                        <div className="flex flex-col items-center text-center px-4 flex-grow">
+                            <h1 className="text-5xl font-bold text-white mt-20 drop-shadow-md">
+                                Sample <span className="text-yellow-400">Gallery</span>
+                            </h1>
 
                             {/* Tab Navigation */}
-                            <div className="flex space-x-4 mt-0.5 bg-white/10 backdrop-blur-md p-2 rounded-xl shadow-lg">
-                                <button
-                                    onClick={() => setActiveTab("product")}
-                                    className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === "product"
-                                        ? "bg-yellow-400 text-black"
-                                        : "bg-white/20 text-white"
-                                        }`}
-                                >
-                                    Product Samples
-                                </button>
-                                <button
-                                    onClick={() => setActiveTab("fabrication")}
-                                    className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === "fabrication"
-                                        ? "bg-yellow-400 text-black"
-                                        : "bg-white/20 text-white"
-                                        }`}
-                                >
-                                    Fabrication Samples
-                                </button>
-                                <button
-                                    onClick={() => setActiveTab("rubber")}
-                                    className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === "rubber"
-                                        ? "bg-yellow-400 text-black"
-                                        : "bg-white/20 text-white"
-                                        }`}
-                                >
-                                    Rubber Samples
-                                </button>
+                            <div className="flex space-x-2 mt-0.5 bg-white/10 backdrop-blur-md p-0.5 rounded-xl shadow-lg">
+                                {[
+                                    { key: "product", label: "Product Samples" },
+                                    { key: "fabrication", label: "Fabrication Samples" },
+                                    { key: "rubber", label: "Rubber Samples" },
+                                ].map(({ key, label }) => (
+                                    <button
+                                        key={key}
+                                        onClick={() => setActiveTab(key)}
+                                        className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === key ? "bg-yellow-400 text-black" : "bg-white/20 text-white"
+                                            }`}
+                                    >
+                                        {label}
+                                    </button>
+                                ))}
                             </div>
 
                             {/* Swiper Container */}
-                            <div className="relative w-165 max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-2">
+                            <div className="relative w-full max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-1 shadow-lg mt-6">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
                                     navigation={{
                                         nextEl: ".swiper-button-next",
                                         prevEl: ".swiper-button-prev",
                                     }}
-                                    pagination={{
-                                        el: ".custom-pagination",
-                                        clickable: true,
-                                    }}
+                                    pagination={{ el: ".custom-pagination", clickable: true }}
                                     className="w-full pb-12"
                                 >
                                     {samples.map((sample, index) => (
@@ -181,10 +160,10 @@ const SampleProducts = () => {
                                     ))}
                                 </Swiper>
 
-                                {/* Pagination */}
-                                <div className="custom-pagination absolute bottom-4 w-full flex justify-center space-x-2 pb-0.5 pt-0.5"></div>
+                                
+                                <div className="custom-pagination absolute bottom-0.5 w-full flex justify-center space-x-2 pb-0 pt-2"></div>
 
-                                {/* Navigation Buttons */}
+                                
                                 <button className="swiper-button-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-4 rounded-full shadow-lg hover:bg-white/60 hover:text-black transition duration-300 ease-in-out">
                                     ❮
                                 </button>
