@@ -35,9 +35,9 @@ const Header = () => {
               </Link>
             ))}
 
-            {/* Find Us Link */}
+            
             <a
-              href="https://maps.app.goo.gl/wAjjdnmb7onYbHhX8"
+              href="https://maps.app.goo.gl/4fVy6X7d8bmr8qQHA"
               target="_blank"
               rel="noopener noreferrer"
               className="relative text-white font-medium transition hover:text-gray-300"
@@ -46,7 +46,7 @@ const Header = () => {
             </a>
           </nav>
 
-          {/* Mobile Menu Button */}
+          
           <div className="absolute right-4 md:hidden">
             <button
               className="rounded-sm bg-gray-100 p-2 text-gray-700 transition hover:text-gray-900"

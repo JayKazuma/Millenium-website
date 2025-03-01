@@ -98,7 +98,7 @@ const SampleProducts = () => {
         ? productSamples
         : activeTab === "fabrication"
             ? fabricationSamples
-            : rubberSamples; // Correctly selects rubberSamples
+            : rubberSamples; 
  
 
     return (
