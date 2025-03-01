@@ -10,11 +10,11 @@ const Hero = () => {
     return (
         <>
         <Head>
-                <title>Millenium Toolings and Fabrication - We Got What You Need</title>
+                <title>Millenium Toolings and Fabrication Inc.</title>
                 <meta name="description" content="Millenium Toolings provides top-quality engineering tools for professionals." />
-                <meta name="keywords" content="Millenium Toolings, engineering tools, fabrication, supplier, manufacturing, millenium toolings and fabrication, millenium location" />
-                <meta name="author" content="Millenium Toolings" />
-                <meta property="og:title" content="Millenium Toolings - Best Tools for Engineers" />
+                <meta name="keywords" content="Millenium Toolings, engineering tools, fabrication, supplier, manufacturing, millenium toolings and fabrication, millenium location, millenium website, millenium.com" />
+                <meta name="author" content="Millenium Toolings and Fabrication Inc." />
+                <meta property="og:title" content="Millenium Toolings and Fabrication Inc." />
                 <meta property="og:description" content="Millenium Toolings provides high-quality engineering tools and fabrication services." />
                 <meta property="og:image" content="/Topview.png" />
                 <meta property="og:url" content="https://milleniumtoolings.vercel.app" />
