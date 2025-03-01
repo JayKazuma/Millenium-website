@@ -24,10 +24,10 @@ const Hero = () => {
                 {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
                 {loaded && (
                     <>
-                        {/* Overlay for better contrast */}
+                        
                         <div className="absolute inset-0 bg-black/60"></div>
 
-                        {/* Hero Content with Border */}
+                        
                         <div className="relative mx-auto max-w-screen-xl px-6 py-32 sm:px-12 flex flex-col lg:justify-center lg:flex-grow lg:px-16">
                             <div className="max-w-2xl text-center sm:text-left border border-gray-700 rounded-lg p-6 bg-black/40">
                                 <h1 className="text-6xl font-extrabold text-white sm:text-7xl leading-tight">

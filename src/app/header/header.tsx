@@ -75,7 +75,7 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-80 flex flex-col justify-center items-center text-white z-50"
+            className="fixed inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -105,7 +105,7 @@ const Header = () => {
                 </Link>
               ))}
 
-              {/* Find Us Link in Mobile Menu */}
+              
               <a
                 href="https://maps.app.goo.gl/wAjjdnmb7onYbHhX8"
                 target="_blank"
