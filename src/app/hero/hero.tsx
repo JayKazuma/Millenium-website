@@ -10,9 +10,9 @@ const Hero = () => {
     return (
         <>
         <Head>
-                <title>Millenium Toolings - Best Tools for Engineers</title>
+                <title>Millenium Toolings and Fabrication - We Got What You Need</title>
                 <meta name="description" content="Millenium Toolings provides top-quality engineering tools for professionals." />
-                <meta name="keywords" content="Millenium Toolings, engineering tools, fabrication, supplier, manufacturing" />
+                <meta name="keywords" content="Millenium Toolings, engineering tools, fabrication, supplier, manufacturing, millenium toolings and fabrication, millenium location" />
                 <meta name="author" content="Millenium Toolings" />
                 <meta property="og:title" content="Millenium Toolings - Best Tools for Engineers" />
                 <meta property="og:description" content="Millenium Toolings provides high-quality engineering tools and fabrication services." />
