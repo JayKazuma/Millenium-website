@@ -18,7 +18,7 @@ const Hero = () => {
                 <meta property="og:title" content="Millenium Toolings and Fabrication Inc." />
                 <meta property="og:description" content="Millenium Toolings provides high-quality engineering tools and fabrication services." />
                 <meta property="og:image" content="/Topview.png" />
-                <link rel="icon" href="/HEXAGON.ico" />
+                <link rel="icon" href="/favicon.ico" />
                 <meta property="og:url" content="https://milleniumtoolings.vercel.app" />
             </Head>
         <section className="relative flex flex-col min-h-screen bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat">
