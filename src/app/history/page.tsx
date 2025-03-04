@@ -9,12 +9,12 @@ const History = () => {
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <div>
+        <div className="overflow-hidden">
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
                 <>
                     <Header />
-                    <section className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat">
+                    <section className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
                         <div className="absolute inset-0 bg-black/60"></div>
                         <div className="relative flex flex-col items-center justify-center h-screen text-center text-white px-6">
                             <h1 className="text-5xl font-extrabold text-green-500 sm:text-6xl">
@@ -26,7 +26,7 @@ const History = () => {
 
                         </div>
                     </section>
-                    <section className="bg-gray-100 py-16 px-6 sm:px-12 lg:px-20">
+                    <section className="bg-gray-100 py-16 px-6 sm:px-12 lg:px-20 overflow-hidden">
                         <div className="max-w-5xl mx-auto">
                             <h2 className="text-3xl font-bold text-gray-800 sm:text-4xl text-center">
                                 Our Journey Through Time

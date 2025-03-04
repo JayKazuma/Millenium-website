@@ -102,7 +102,7 @@ const SampleProducts = () => {
  
 
     return (
-        <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col">
+        <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
                 <>
