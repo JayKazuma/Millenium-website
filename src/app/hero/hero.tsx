@@ -31,7 +31,7 @@ const Hero = () => {
                             <div className="relative mx-auto w-full px-6 py-32 sm:px-12 flex flex-col lg:justify-center lg:flex-grow lg:px-16">
                                 <div className="max-w-2xl text-center sm:text-left border border-gray-700 rounded-lg p-6 bg-black/40">
                                     <h1 className="text-5xl sm:text-6xl font-extrabold text-white leading-tight text-center sm:text-left break-words w-full">
-                                        <span className="bg-gradient-to-r from-green-400 via-blue-500 to-red-500 bg-clip-text text-transparent inline-block w-full">
+                                        <span className="bg-gradient-to-r from-green-500 via-blue-500 to-red-500 bg-clip-text text-transparent inline-block w-full">
                                             MILLENIUM
                                         </span>
                                     </h1>

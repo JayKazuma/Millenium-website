@@ -14,7 +14,7 @@ const Loading: React.FC<LoadingProps> = ({ onLoaded }) => {
         const timeout = setTimeout(() => {
             setLoading(false);
             onLoaded(); // Notify parent that loading is complete
-        }, 1000); // Adjust delay as needed
+        }, 1300); // Adjust delay as needed
 
         return () => clearTimeout(timeout); // Cleanup function
     }, [onLoaded]);
