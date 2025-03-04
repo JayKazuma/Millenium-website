@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Header from "../header/header";
 import Loading from "../loading/loading";
+import Footer from "../footer/footer";
 
 interface ContactItemProps {
     href: string;
@@ -55,9 +56,11 @@ const ContactUs: React.FC = () => {
             <div className="absolute top-0 w-full z-50">
                 <Header />
             </div>
+            <div className="relative flex-grow bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat w-full h-screen">
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
-                <section className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat">
+                <section className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-[url('/HEXAGON.png')] bg-contain bg-center bg-no-repeat">
+                    
                     <div className="absolute inset-0 bg-black/75"></div>
                     <div className="relative flex flex-col items-center">
                         <h1 className="text-5xl font-bold text-green-500 sm:text-6xl">
@@ -76,6 +79,7 @@ const ContactUs: React.FC = () => {
                     </div>
                 </section>
             )}
+            </div>
         </div>
     );
 };
