@@ -143,6 +143,7 @@ const SampleProducts = () => {
                                     }}
                                     pagination={{ el: ".custom-pagination", clickable: true }}
                                     className="w-full pb-12"
+                                    loop={true}
                                 >
                                     {samples.map((sample, index) => (
                                         <SwiperSlide key={index}>
