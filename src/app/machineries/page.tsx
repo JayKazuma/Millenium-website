@@ -63,6 +63,7 @@ const Machineries = () => {
                                         clickable: true,
                                     }}
                                     className="w-full pb-12"
+                                    loop={true}
                                 >
                                     {machines.map((machine, index) => (
                                         <SwiperSlide key={index}>
