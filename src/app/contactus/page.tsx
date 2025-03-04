@@ -27,11 +27,7 @@ const contactItems: ContactItemProps[] = [
         label: "Click to Call Us",
         iconPath: "M6.6 2a2 2 0 00-2 2c0 10.493 8.507 19 19 19a2 2 0 002-2v-3.6a2 2 0 00-1.85-2c-1.343-.098-2.84-.472-3.75-1.38-.907-.907-1.28-2.407-1.38-3.75a2 2 0 00-2-1.85H10a2 2 0 00-2 2v2c0 .552-.448 1-1 1H6a2 2 0 01-2-2V4a2 2 0 012-2h.6z",
     },
-    {
-        href: "fax:(049)536-4886",
-        label: "Send a Fax",
-        iconPath: "M6 2a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V6l-4-4H6zm10 2l2 2h-2V4zm-4 14h-4v-2h4v2zm2 0v-2h4v2h-4zM6 12h12v2H6v-2zm0-4h12v2H6V8z",
-    },
+    
 ];
 
 const ContactItem: React.FC<ContactItemProps> = ({ href, label, iconPath }) => (
@@ -72,7 +68,7 @@ const ContactUs: React.FC = () => {
                     </div>
 
                     {/* Contact Info Grid */}
-                    <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 gap-6 mt-12">
+                    <div className="relative z-10 grid grid-cols-3 sm:grid-cols-3 gap-6 mt-12">
                         {contactItems.map((item, index) => (
                             <ContactItem key={index} {...item} />
                         ))}
