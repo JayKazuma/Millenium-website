@@ -107,7 +107,7 @@ const Header = () => {
 
               
               <a
-                href="https://maps.app.goo.gl/wAjjdnmb7onYbHhX8"
+                href="https://maps.app.goo.gl/tgkNZQLVrRqGjPav5"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-gray-400"
