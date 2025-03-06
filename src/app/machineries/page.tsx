@@ -13,23 +13,44 @@ import Footer from "../footer/footer";
 
 const Machineries = () => {
     const [loaded, setLoaded] = useState(false);
+    const [zoomedImage, setZoomedImage] = useState<string | null>(null);
+ // State for zoomed image
 
     const machines = [
-        { name: "9 UNITS CNC VERTICAL MACHINING CENTER", image: "/M1.png" },
-        { name: "1 UNIT MAZAK QT 6T QUICK TURN", image: "/M2.png" },
-        { name: "2 UNITS DOOSAN LYNX 200 W/ TAIL STOCK", image: "/M3.png" },
-        { name: "1 UNIT CITIZEN CINCOM 2 AXIS with back spindle", image: "/M4.png" },
-        { name: "1 UNIT HANWHA TechM", image: "/M5.png" },
-        { name: "2 UNITS CHMER CNC WIRE EDM", image: "/M6.png" },
-        { name: "1 UNIT EDM DIE SINK", image: "/M7.png" },
-        { name: "1 UNIT EDM DRILL", image: "/M8.png" },
-        { name: "3 UNITS SISMA BIGSMARK 200F LASER MARKING / ENGRAVING", image: "/M9.png" },
-        { name: "2 UNITS SURFACE GRINDER", image: "/M10.png" },
-        { name: "1 UNIT CONVENTIONAL LATHE MACHINE", image: "/M11.png" },
-        { name: "1 UNIT NABERTHERN N40 ELECTRIC FURNACE", image: "/M12.png" },
-        { name: "4 UNITS RUBBER HOT PRESS MACHINE", image: "/M13.png" },
-        { name: "1 UNIT HYDRAULIC GUILLOTINE SHEARING MACHINE", image: "/M14.png" },
-        { name: "INSIZE PROFILE PROJECTOR", image: "/M15.png" },
+        { name: "", image: "/m1.jpg" },
+        { name: "", image: "/m2.jpg" },
+        { name: "", image: "/m3.jpg" },
+        { name: "", image: "/m4.jpg" },
+        { name: "", image: "/m5.jpg" },
+        { name: "", image: "/m6.jpg" },
+        { name: "", image: "/m7.jpg" },
+        { name: "", image: "/m8.jpg" },
+        { name: "", image: "/m9.jpg" },
+        { name: "", image: "/m10.jpg" },
+        { name: "", image: "/m11.jpg" },
+        { name: "", image: "/m12.jpg" },
+        { name: "", image: "/m13.jpg" },
+        { name: "", image: "/m14.jpg" },
+        { name: "", image: "/m15.jpg" },
+        { name: "", image: "/m16.jpg" },
+        { name: "", image: "/m17.jpg" },
+        { name: "", image: "/m18.jpg" },
+        { name: "", image: "/m19.jpg" },
+        { name: "", image: "/m20.jpg" },
+        { name: "", image: "/m21.jpg" },
+        { name: "", image: "/m22.jpg" },
+        { name: "", image: "/m23.jpg" },
+        { name: "", image: "/m24.jpg" },
+        { name: "", image: "/m25.jpg" },
+        { name: "", image: "/m26.jpg" },
+        { name: "", image: "/m27.jpg" },
+        { name: "", image: "/m28.jpg" },
+        { name: "", image: "/m29.jpg" },
+        { name: "", image: "/m30.jpg" },
+        { name: "", image: "/m31.jpg" },
+        { name: "", image: "/m32.jpg" },
+        { name: "", image: "/m33.jpg" },
+        { name: "", image: "/m34.jpg" },
     ];
 
     return (
@@ -43,36 +64,31 @@ const Machineries = () => {
                         <Header />
 
                         <div className="flex flex-col justify-center items-center text-center h-full px-4">
-                            {/* Title Section with Responsive Text Size */}
+                            {/* Title Section */}
                             <div className="mt-24">
                                 <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-md">
                                     Our <span className="text-yellow-400">Machines</span>
                                 </h1>
                             </div>
 
-                            {/* Swiper Container with Full Width Support on Mobile */}
+                            {/* Swiper Container */}
                             <div className="relative w-full max-w-5xl md:w-165 bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-0.5">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
-                                    navigation={{
-                                        nextEl: ".swiper-button-next",
-                                        prevEl: ".swiper-button-prev",
-                                    }}
-                                    pagination={{
-                                        el: ".custom-pagination",
-                                        clickable: true,
-                                    }}
+                                    navigation
+                                    pagination={{ clickable: true }}
                                     className="w-full pb-12"
                                     loop={true}
                                 >
                                     {machines.map((machine, index) => (
                                         <SwiperSlide key={index}>
                                             <div className="flex flex-col justify-center items-center">
-                                                {/* Responsive Image Size */}
+                                                {/* Clickable Image */}
                                                 <img
                                                     src={machine.image}
                                                     alt={machine.name}
-                                                    className="w-full max-w-[90%] h-auto md:h-[50vh] object-contain rounded-lg shadow-md"
+                                                    className="w-full max-w-[90%] h-auto md:h-[50vh] object-contain rounded-lg shadow-md cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
+                                                    onClick={() => setZoomedImage(machine.image)}
                                                 />
                                                 <h3 className="text-lg md:text-2xl font-semibold text-white mt-4 drop-shadow-md">
                                                     {machine.name}
@@ -85,19 +101,28 @@ const Machineries = () => {
                                 {/* Pagination Section */}
                                 <div className="custom-pagination absolute bottom-4 w-full flex justify-center space-x-2 pb-0.5 pt-0.5"></div>
 
-                                {/* Navigation Buttons Adjusted for Mobile */}
-                                <button className="swiper-button-prev absolute left-1 md:left-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-2 md:p-4 rounded-full shadow-lg hover:bg-white/60 hover:text-black transition duration-300 ease-in-out">
-                                    ❮
-                                </button>
-                                <button className="swiper-button-next absolute right-1 md:right-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-2 md:p-4 rounded-full shadow-lg hover:bg-white/60 hover:text-black transition duration-300 ease-in-out">
-                                    ❯
-                                </button>
+                                {/* Navigation Buttons */}
+                                
                             </div>
                         </div>
 
                         <Footer />
                     </div>
                 </>
+            )}
+
+            {/* Zoomed Image Modal */}
+            {zoomedImage && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+                    onClick={() => setZoomedImage(null)} // Close modal when clicking outside
+                >
+                    <img
+                        src={zoomedImage}
+                        className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
+                    />
+                </div>
             )}
         </div>
     );

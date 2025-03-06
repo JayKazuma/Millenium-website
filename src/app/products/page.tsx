@@ -14,6 +14,7 @@ import Footer from "../footer/footer";
 const SampleProducts = () => {
     const [loaded, setLoaded] = useState(false);
     const [activeTab, setActiveTab] = useState("product"); // Track which tab is selected
+    const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
     // Product Samples Data
     const productSamples = [
@@ -152,6 +153,7 @@ const SampleProducts = () => {
                                                     src={sample.image}
                                                     alt={sample.name}
                                                     className="w-full h-[50vh] object-contain rounded-lg shadow-md"
+                                                    onClick={() => setZoomedImage(sample.image)}
                                                 />
                                                 <h3 className="text-2xl font-semibold text-white mt-4 drop-shadow-md">
                                                     {sample.name}
@@ -178,6 +180,19 @@ const SampleProducts = () => {
                     </div>
                 </>
             )}
+            {zoomedImage && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
+                    onClick={() => setZoomedImage(null)} // Close modal when clicking outside
+                >
+                    <img
+                        src={zoomedImage}
+                        className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
+                    />
+                </div>
+            )}
+
         </div>
     );
 };
