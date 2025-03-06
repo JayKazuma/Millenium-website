@@ -83,14 +83,14 @@ const SampleProducts = () => {
     ];
 
     const rubberSamples = [
-        { name: "Silicon Rubber Fixture", image: "/r1.png" },
-        { name: "Silicon Ferule Gasket", image: "/r2.png" },
-        { name: "Rubber Seal & Seal Ring", image: "/r3.png" },
+        { name: "Silicon Rubber Fixture", image: "/r1.jpg" },
+        { name: "Silicon Ferule Gasket", image: "/r2.jpg" },
+        { name: "Rubber Seal & Seal Ring", image: "/r3.jpg" },
         { name: "Silicon Suction Cup w/ Bronze", image: "/r4.png" },
-        { name: "Silicon O-Ring Rubber", image: "/r5.png" },
+        { name: "Silicon O-Ring Rubber", image: "/r5.jpg" },
         { name: "Silicon Suction Cup", image: "/r6.png" },
-        { name: "Silicon D-Rubber", image: "/r7.png" },
-        { name: "Rubber Spacer", image: "/r8.png" },
+        { name: "Silicon D-Rubber", image: "/r7.jpg" },
+        { name: "Rubber Spacer", image: "/r8.jpg" },
     ];
 
     // Determine which set of images to display
