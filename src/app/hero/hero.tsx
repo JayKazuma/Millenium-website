@@ -3,9 +3,13 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import Loading from "../loading/loading";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 const Hero = () => {
     const [loaded, setLoaded] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname(); // Get current route
 
     return (
         <>
@@ -26,7 +30,7 @@ const Hero = () => {
                     {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
                     {loaded && (
                         <>
-                            <div className="absolute inset-0 bg-black/60"></div>
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
 
                             <div className="relative mx-auto w-full px-6 py-32 sm:px-12 flex flex-col lg:justify-center lg:flex-grow lg:px-16">
                                 <div className="max-w-2xl text-center sm:text-left border border-gray-700 rounded-lg p-6 bg-black/40">
@@ -39,30 +43,89 @@ const Hero = () => {
                                     <h2 className="text-3xl font-semibold text-gray-300 mt-2">
                                         Toolings & Fabrication Inc.
                                     </h2>
+
                                     <div className="pt-5">
                                         <h3 className="text-2xl font-semibold text-white text-center">OUR VISION</h3>
                                         <p className="mt-2 text-white">
-                                            To be recognized as most preferred SUPPLIER / PARTNER of our valued
+                                            To be recognized as the most preferred SUPPLIER / PARTNER of our valued
                                             customers in delivering our whole range of products and services beyond our
                                             capacity.
                                         </p>
 
                                         <h3 className="text-2xl font-semibold text-white text-center">OUR MISSION</h3>
                                         <p className="mt-2 text-white">
-                                            To satisfy our valued customer by delivering world class quality products
-                                            and services at the most reasonable cost, in the most appropriate time
+                                            To satisfy our valued customers by delivering world-class quality products
+                                            and services at the most reasonable cost, in the most appropriate time,
                                             beyond their expectations through reinforced partnership with our own
                                             suppliers and our most valuable resources - our manpower / personnel,
-                                            providing a smooth and stimulating working environment, rewarding benefits
-                                            coupled with dignity.
+                                            providing a smooth and stimulating working environment with rewarding
+                                            benefits coupled with dignity.
                                         </p>
+
+                                        <button
+                                            className="md:hidden bg-blue-600 px-4 py-2 mt-4 rounded text-white w-full transition duration-100 hover:bg-blue-600/40 hover:shadow-lg"
+                                            onClick={() => setIsMenuOpen(true)}
+                                        >
+                                            Learn More
+                                        </button>
+
+
+                                        <AnimatePresence>
+                                            {isMenuOpen && (
+                                                <motion.div
+                                                    className="fixed inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white z-50"
+                                                    initial={{ opacity: 0 }}
+                                                    animate={{ opacity: 1 }}
+                                                    exit={{ opacity: 0 }}
+                                                >
+                                                    <button
+                                                        className="absolute top-6 right-6 text-white text-3xl"
+                                                        onClick={() => setIsMenuOpen(false)}
+                                                    >
+                                                        &times;
+                                                    </button>
+                                                    <nav className="space-y-6 text-2xl font-medium text-center">
+                                                        {[
+                                                            { name: "Home", href: "/" },
+                                                            { name: "Products", href: "/products" },
+                                                            { name: "Machineries", href: "/machineries" },
+                                                            { name: "History", href: "/history" },
+                                                            { name: "Contact Us", href: "/contactus" },
+                                                        ].map((link) => (
+                                                            <Link
+                                                                key={link.href}
+                                                                href={link.href}
+                                                                onClick={() => setIsMenuOpen(false)}
+                                                                className={`block hover:text-gray-400 ${pathname === link.href ? "underline underline-offset-8" : ""
+                                                                    }`}
+                                                            >
+                                                                {link.name}
+                                                            </Link>
+                                                        ))}
+
+
+                                                        <a
+                                                            href="https://maps.app.goo.gl/tgkNZQLVrRqGjPav5"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="block hover:text-gray-400"
+                                                        >
+                                                            Find Us
+                                                        </a>
+                                                    </nav>
+                                                </motion.div>
+                                            )}
+                                        </AnimatePresence>
                                     </div>
                                 </div>
                             </div>
                         </>
                     )}
                 </div>
+
+                
             </section>
+            
         </>
     );
 };
