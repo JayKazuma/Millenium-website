@@ -17,13 +17,13 @@ const SampleProducts = () => {
 
     // Product Samples Data
     const productSamples = [
-        { name: "INSPECTION JIG", image: "/p1.png" },
-        { name: "DEFLASH PUNCH", image: "/p2.png" },
-        { name: "PRECISION & SEMI-PRECISION PARTS", image: "/p3.png" },
-        { name: "CRIMPING DIE", image: "/p4.png" },
-        { name: "MACHINE PARTS", image: "/p5.png" },
-        { name: "CUTTER BLADES", image: "/p6.png" },
-        { name: "CUT PUNCH", image: "/p7.png" },
+        { name: "", image: "/p1.jfif" },
+        { name: " ", image: "/p2.jfif" },
+        { name: " ", image: "/p3.jfif" },
+        { name: " ", image: "/p4.jfif" },
+        { name: " ", image: "/p5.jfif" },
+        { name: " ", image: "/p6.jfif" },
+        { name: " ", image: "/p7.jfif" },
         { name: "ANVIL & BLADES", image: "/p8.png" },
         { name: "DEFLASH CUT PUNCHES", image: "/p9.png" },
         { name: "POLYETHYLENE PLASTICS", image: "/p10.png" },
@@ -53,8 +53,8 @@ const SampleProducts = () => {
         { name: "", image: "/p34.png" },
         { name: "", image: "/p35.png" },
         { name: "", image: "/p36.png" },
-        { name: "", image: "/p37.png" },
-        { name: "", image: "/p38.png" },
+        { name: "", image: "/p37.jfif" },
+        { name: "", image: "/p38.jfif" },
         
     ];
 
