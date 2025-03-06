@@ -63,7 +63,7 @@ const Hero = () => {
                                         </p>
 
                                         <button
-                                            className="md:hidden bg-blue-600 px-4 py-2 mt-4 rounded text-white w-full transition duration-100 hover:bg-blue-600/40 hover:shadow-lg"
+                                            className="md:hidden bg-gradient-to-r from-green-800/40 via-blue-600/80 to-red-700/40 px-4 py-2 mt-4 rounded text-white w-full transition duration-100 hover:bg-blue-500/80 hover:shadow-lg animate-pulse"
                                             onClick={() => setIsMenuOpen(true)}
                                         >
                                             Learn More
