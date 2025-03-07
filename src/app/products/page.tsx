@@ -78,7 +78,7 @@ const SampleProducts = () => {
         { name: "", image: "/f17.png" },
         { name: "", image: "/f18.png" },
         { name: "", image: "/f19.png" },
-        { name: "", image: "/f20.png" },
+        
     ];
 
     const rubberSamples = [
@@ -118,7 +118,7 @@ const SampleProducts = () => {
                             <div className="flex space-x-2 mt-0.5 bg-white/10 backdrop-blur-md p-0.5 rounded-xl shadow-lg">
                                 {[
                                     { key: "product", label: "Product Samples" },
-                                    { key: "fabrication", label: "Fabrication Samples" },
+                                    { key: "fabrication", label: "Fabrication/Facilities" },
                                     { key: "rubber", label: "Rubber Samples" },
                                 ].map(({ key, label }) => (
                                     <button
