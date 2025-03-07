@@ -1,5 +1,6 @@
 "use client";
 
+import { Analytics } from "@vercel/analytics/react"
 import Head from "next/head";
 import React, { useState } from "react";
 import Loading from "../loading/loading";
