@@ -61,7 +61,7 @@ const SampleProducts = () => {
 
     // Fabrication Samples Data
     const fabricationSamples = [
-        { name: "", image: "/f1.png" },
+        { name: "", image: "/g1.gif" },
         { name: "", image: "/f2.png" },
         { name: "", image: "/f3.png" },
         { name: "", image: "/f4.png" },
