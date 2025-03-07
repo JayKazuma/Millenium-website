@@ -16,7 +16,7 @@ const Hero = () => {
             <Head>
                 <title>Millenium Toolings and Fabrication Inc.</title>
                 <meta name="description" content="Millenium Toolings provides top-quality engineering tools for professionals." />
-                <meta name="keywords" content="Millenium Toolings, engineering tools, fabrication, supplier, manufacturing, millenium toolings and fabrication, millenium location, millenium website, millenium.com, Millenium Toolings and Fabrication Services Inc., Millenium Toolings & Fabrication Inc." />
+                <meta name="keywords" content="Millenium Toolings, engineering tools, fabrication, supplier, manufacturing, millenium toolings and fabrication, millenium location, millenium website, millenium toolings.com, Millenium Toolings and Fabrication Services Inc., Millenium Toolings & Fabrication Inc." />
                 <meta name="author" content="Millenium Toolings and Fabrication Inc." />
                 <meta name="application-name" content="Millenium Toolings & Fabrication Services Inc." />
                 <meta property="og:title" content="Millenium Toolings and Fabrication Inc." />

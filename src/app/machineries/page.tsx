@@ -101,10 +101,6 @@ const Machineries = () => {
                                     ))}
                                 </Swiper>
 
-                                {/* Pagination Section */}
-                                <div className="custom-pagination absolute bottom-4 w-full flex justify-center space-x-2 pb-0.5 pt-0.5"></div>
-
-                                {/* Navigation Buttons */}
                                 
                             </div>
                         </div>
