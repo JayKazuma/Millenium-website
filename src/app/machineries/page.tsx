@@ -17,14 +17,17 @@ const Machineries = () => {
  // State for zoomed image
 
     const machines = [
+        { name: "", image: "/g1.gif" },
         { name: "", image: "/m1.jpg" },
         { name: "", image: "/m2.jpg" },
         { name: "", image: "/m3.jpg" },
         { name: "", image: "/m4.jpg" },
         { name: "", image: "/m5.jpg" },
         { name: "", image: "/m6.jpg" },
-        { name: "", image: "/m7.jpg" },
         { name: "", image: "/m8.jpg" },
+        { name: "", image: "/m7.jpg" },
+        { name: "", image: "/g2.gif" },
+        { name: "", image: "/g3.gif" },
         { name: "", image: "/m9.jpg" },
         { name: "", image: "/m10.jpg" },
         { name: "", image: "/m11.jpg" },
