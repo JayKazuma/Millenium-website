@@ -56,7 +56,7 @@ const SampleProducts = () => {
         { name: "", image: "/p36.png" },
         { name: "", image: "/p37.jfif" },
         { name: "", image: "/p38.jfif" },
-        
+
     ];
 
     // Fabrication Samples Data
@@ -78,7 +78,7 @@ const SampleProducts = () => {
         { name: "", image: "/f17.png" },
         { name: "", image: "/f18.png" },
         { name: "", image: "/f19.png" },
-        
+
     ];
 
     const rubberSamples = [
@@ -97,8 +97,8 @@ const SampleProducts = () => {
         ? productSamples
         : activeTab === "fabrication"
             ? fabricationSamples
-            : rubberSamples; 
- 
+            : rubberSamples;
+
 
     return (
         <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
@@ -136,11 +136,8 @@ const SampleProducts = () => {
                             <div className="relative w-full max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-1 shadow-lg mt-6">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
-                                    navigation={{
-                                        nextEl: ".swiper-button-next",
-                                        prevEl: ".swiper-button-prev",
-                                    }}
-                                    pagination={{ el: ".custom-pagination", clickable: true }}
+                                    navigation
+                                    pagination={{ clickable: true }}
                                     className="w-full pb-12"
                                     loop={true}
                                 >
@@ -150,7 +147,7 @@ const SampleProducts = () => {
                                                 <img
                                                     src={sample.image}
                                                     alt={sample.name}
-                                                    className="w-full h-[50vh] object-contain rounded-lg shadow-md"
+                                                    className="w-full max-w-[90%] h-auto md:h-[50vh] object-contain rounded-lg shadow-md cursor-pointer hover:scale-105 transition duration-300 ease-in-out"
                                                     onClick={() => setZoomedImage(sample.image)}
                                                 />
                                                 <h3 className="text-2xl font-semibold text-white mt-4 drop-shadow-md">
@@ -161,16 +158,11 @@ const SampleProducts = () => {
                                     ))}
                                 </Swiper>
 
-                                
+
                                 <div className="custom-pagination absolute bottom-0.5 w-full flex justify-center space-x-2 pb-0 pt-2"></div>
 
-                                
-                                <button className="swiper-button-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-4 rounded-full shadow-lg hover:bg-white/60 hover:text-black transition duration-300 ease-in-out">
-                                    ❮
-                                </button>
-                                <button className="swiper-button-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-white/20 text-white p-4 rounded-full shadow-lg hover:bg-white/60 hover:text-black transition duration-300 ease-in-out">
-                                    ❯
-                                </button>
+
+
                             </div>
                         </div>
 

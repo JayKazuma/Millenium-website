@@ -100,6 +100,7 @@ const Machineries = () => {
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
+                                <div className="custom-pagination absolute bottom-0.5 w-full flex justify-center space-x-2 pb-0 pt-2"></div>
 
                                 
                             </div>
