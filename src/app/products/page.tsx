@@ -115,7 +115,7 @@ const SampleProducts = () => {
                             </h1>
 
                             {/* Tab Navigation */}
-                            <div className="flex space-x-2 mt-0.5 bg-white/10 backdrop-blur-md p-0.5 rounded-xl shadow-lg">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg">
                                 {[
                                     { key: "product", label: "Product Samples" },
                                     { key: "fabrication", label: "Fabrication/Facilities" },
@@ -124,7 +124,7 @@ const SampleProducts = () => {
                                     <button
                                         key={key}
                                         onClick={() => setActiveTab(key)}
-                                        className={`px-6 py-2 text-lg font-semibold rounded-lg transition ${activeTab === key ? "bg-yellow-400 text-black" : "bg-white/20 text-white"
+                                        className={`w-full sm:w-auto px-4 py-2 text-sm sm:text-lg font-semibold rounded-lg transition ${activeTab === key ? "bg-yellow-400 text-black" : "bg-white/20 text-white"
                                             }`}
                                     >
                                         {label}
