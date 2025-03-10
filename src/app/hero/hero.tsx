@@ -39,7 +39,7 @@ const Hero = () => {
                                         <img
                                             src="HEXAGON.png"
                                             alt="Millenium Logo"
-                                            className="absolute top-0 right-0 w-32 h-auto"
+                                            className="absolute top-0 right-0 w-32 h-auto hidden sm:block"
                                         />
                                     </div>
                                     <h1 className="text-5xl sm:text-6xl font-extrabold text-white leading-tight text-center sm:text-left break-words w-full">
