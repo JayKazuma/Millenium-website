@@ -52,10 +52,10 @@ const ContactUs: React.FC = () => {
             <div className="absolute top-0 w-full z-50">
                 <Header />
             </div>
-            <div className="relative flex-grow bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat w-full h-screen overflow-hidden">
+            <div className="relative flex-grow bg-[url('/mtfsibackdrop.jpg')] bg-cover bg-center bg-no-repeat w-full h-screen overflow-hidden">
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
-                <section className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-[url('/HEXAGON.png')] bg-contain bg-center bg-no-repeat">
+                <section className="relative w-full h-screen flex flex-col items-center justify-center text-center bg-contain bg-center bg-no-repeat">
                     
                     <div className="absolute inset-0 bg-black/75"></div>
                     <div className="relative flex flex-col items-center">

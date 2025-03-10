@@ -14,7 +14,7 @@ const History = () => {
             {loaded && (
                 <>
                     <Header />
-                    <section className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat overflow-hidden">
+                    <section className="relative bg-[url('/mtfsibackdrop.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden">
                         <div className="absolute inset-0 bg-black/60"></div>
                         <div className="relative flex flex-col items-center justify-center h-screen text-center text-white px-6">
                             <h1 className="text-5xl font-extrabold text-green-500 sm:text-6xl">

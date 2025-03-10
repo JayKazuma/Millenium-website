@@ -57,7 +57,7 @@ const Machineries = () => {
     ];
 
     return (
-        <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen overflow-hidden">
+        <div className="relative bg-[url('/mtfsibackdrop.jpg')] bg-cover bg-center bg-no-repeat min-h-screen overflow-hidden">
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
                 <>

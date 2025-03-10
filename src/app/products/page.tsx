@@ -101,7 +101,7 @@ const SampleProducts = () => {
 
 
     return (
-        <div className="relative bg-[url('/Topview.png')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
+        <div className="relative bg-[url('/mtfsibackdrop.jpg')] bg-cover bg-center bg-no-repeat min-h-screen flex flex-col overflow-hidden">
             {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
             {loaded && (
                 <>
@@ -133,7 +133,7 @@ const SampleProducts = () => {
                             </div>
 
                             {/* Swiper Container */}
-                            <div className="relative w-full max-w-5xl bg-white/10 backdrop-blur-md rounded-2xl p-1 shadow-lg mt-6">
+                            <div className="relative w-full max-w-5xl md:w-165 bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-0.5">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
                                     navigation
