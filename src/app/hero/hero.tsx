@@ -26,7 +26,7 @@ const Hero = () => {
                 <link rel="icon" href="/favicon.ico" />
                 <meta property="og:url" content="https://milleniumtoolings.vercel.app" />
             </Head>
-            <section className="relative flex flex-col min-h-screen bg-[url('/mtfsibackdrop.jpg')] bg-cover bg-center bg-no-repeat w-full overflow-hidden">
+            <section className="relative flex flex-col min-h-screen bg-[url('/mtfsimobilebg.jpg')] sm:bg-[url('/mtfsibackdrop.jpg')] bg-cover bg-center bg-no-repeat w-full overflow-hidden">
                 <div className="relative flex-grow bg-contain bg-center bg-no-repeat w-full">
                     {!loaded && <Loading onLoaded={() => setLoaded(true)} />}
                     {loaded && (
