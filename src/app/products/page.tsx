@@ -13,10 +13,10 @@ import Footer from "../footer/footer";
 
 const SampleProducts = () => {
     const [loaded, setLoaded] = useState(false);
-    const [activeTab, setActiveTab] = useState("product"); // Track which tab is selected
+    const [activeTab, setActiveTab] = useState("product"); 
     const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
-    // Product Samples Data
+   
     const productSamples = [
         { name: "", image: "/p1.jfif" },
         { name: " ", image: "/p2.jfif" },
@@ -59,7 +59,7 @@ const SampleProducts = () => {
 
     ];
 
-    // Fabrication Samples Data
+   
     const fabricationSamples = [
         { name: "", image: "/f3.png" },
         { name: "", image: "/f4.png" },
@@ -92,7 +92,7 @@ const SampleProducts = () => {
         { name: "", image: "/r8.jpg" },
     ];
 
-    // Determine which set of images to display
+  
     const samples = activeTab === "product"
         ? productSamples
         : activeTab === "fabrication"
@@ -114,7 +114,7 @@ const SampleProducts = () => {
                                 Sample <span className="text-yellow-400">Gallery</span>
                             </h1>
 
-                            {/* Tab Navigation */}
+                            
                             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg">
                                 {[
                                     { key: "product", label: "Product Samples" },
@@ -132,7 +132,7 @@ const SampleProducts = () => {
                                 ))}
                             </div>
 
-                            {/* Swiper Container */}
+                            
                             <div className="relative w-full max-w-5xl md:w-165 bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-0.5">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
@@ -173,12 +173,12 @@ const SampleProducts = () => {
             {zoomedImage && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
-                    onClick={() => setZoomedImage(null)} // Close modal when clicking outside
+                    onClick={() => setZoomedImage(null)} 
                 >
                     <img
                         src={zoomedImage}
                         className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
-                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
+                        onClick={(e) => e.stopPropagation()} 
                     />
                 </div>
             )}

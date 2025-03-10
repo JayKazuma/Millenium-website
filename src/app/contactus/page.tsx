@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Header from "../header/header";
 import Loading from "../loading/loading";
-import Footer from "../footer/footer";
+
 
 interface ContactItemProps {
     href: string;
@@ -67,7 +67,7 @@ const ContactUs: React.FC = () => {
                         </p>
                     </div>
 
-                    {/* Contact Info Grid */}
+                    
                     <div className="relative z-10 grid grid-cols-3 sm:grid-cols-3 gap-6 mt-12">
                         {contactItems.map((item, index) => (
                             <ContactItem key={index} {...item} />

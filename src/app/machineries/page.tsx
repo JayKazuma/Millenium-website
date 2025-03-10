@@ -67,14 +67,13 @@ const Machineries = () => {
                         <Header />
 
                         <div className="flex flex-col justify-center items-center text-center h-full px-4">
-                            {/* Title Section */}
                             <div className="mt-24">
                                 <h1 className="text-3xl md:text-5xl font-bold text-white drop-shadow-md">
                                     Our <span className="text-yellow-400">Machines</span>
                                 </h1>
                             </div>
 
-                            {/* Swiper Container */}
+                            
                             <div className="relative w-full max-w-5xl md:w-165 bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-lg mt-0.5">
                                 <Swiper
                                     modules={[Navigation, Pagination]}
@@ -86,7 +85,7 @@ const Machineries = () => {
                                     {machines.map((machine, index) => (
                                         <SwiperSlide key={index}>
                                             <div className="flex flex-col justify-center items-center">
-                                                {/* Clickable Image */}
+                                                
                                                 <img
                                                     src={machine.image}
                                                     alt={machine.name}
@@ -111,16 +110,16 @@ const Machineries = () => {
                 </>
             )}
 
-            {/* Zoomed Image Modal */}
+            
             {zoomedImage && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
-                    onClick={() => setZoomedImage(null)} // Close modal when clicking outside
+                    onClick={() => setZoomedImage(null)} 
                 >
                     <img
                         src={zoomedImage}
                         className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
-                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking on the image
+                        onClick={(e) => e.stopPropagation()} 
                     />
                 </div>
             )}

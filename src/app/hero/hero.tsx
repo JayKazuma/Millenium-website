@@ -10,7 +10,7 @@ import Link from "next/link";
 const Hero = () => {
     const [loaded, setLoaded] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const pathname = usePathname(); // Get current route
+    const pathname = usePathname(); 
 
     return (
         <>

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname(); // Get current route
+  const pathname = usePathname(); 
 
   return (
     <header className="bg-gradient-to-r from-green-800/30 via-blue-600/30 to-red-700/30 shadow-md fixed w-full z-50">
@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex h-16 items-center justify-center">
           
 
-          {/* Centered Navigation for Desktop */}
+          
           <nav className="hidden md:flex items-center gap-8">
             {[
               { name: "Home", href: "/" },
@@ -71,7 +71,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Animated Fullscreen Mobile Menu */}
+      
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
