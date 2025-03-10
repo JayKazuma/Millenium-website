@@ -78,6 +78,17 @@ const SampleProducts = () => {
         { name: "", image: "/f17.png" },
         { name: "", image: "/f18.png" },
         { name: "", image: "/f19.png" },
+        { name: "", image: "/f20.png" },
+        { name: "", image: "/f21.png" },
+        { name: "", image: "/f22.png" },
+        { name: "", image: "/f23.png" },
+        { name: "", image: "/f24.png" },
+        { name: "", image: "/f25.png" },
+        { name: "", image: "/f26.png" },
+        { name: "", image: "/f27.png" },
+        { name: "", image: "/f28.png" },
+        { name: "", image: "/f29.png" },
+        { name: "", image: "/f30.png" },
 
     ];
 
@@ -92,12 +103,49 @@ const SampleProducts = () => {
         { name: "", image: "/r8.jpg" },
     ];
 
+    
+    const civilServices = [
+        { name: "", image: "/c1.png" },
+        { name: "", image: "/c2.png" },
+        { name: "", image: "/c3.png" },
+        { name: "", image: "/c4.png" },
+        { name: "", image: "/c5.png" },
+        { name: "", image: "/c6.png" },
+        { name: "", image: "/c7.png" },
+        { name: "", image: "/c8.png" },
+        { name: "", image: "/c9.png" },
+        { name: "", image: "/c10.png" },
+        { name: "", image: "/c11.png" },
+        { name: "", image: "/c12.png" },
+        { name: "", image: "/c13.png" },
+        { name: "", image: "/c14.png" },
+        { name: "", image: "/c15.png" },
+        { name: "", image: "/c16.png" },
+        { name: "", image: "/c17.png" },
+        { name: "", image: "/c18.png" },
+        { name: "", image: "/c19.png" },
+        { name: "", image: "/c20.png" },
+        { name: "", image: "/c21.png" },
+        { name: "", image: "/c22.png" },
+        { name: "", image: "/c23.png" },
+        { name: "", image: "/c24.png" },
+        { name: "", image: "/c25.png" },
+        { name: "", image: "/c26.png" },
+        { name: "", image: "/c27.png" },
+        { name: "", image: "/c28.png" },
+        { name: "", image: "/c29.png" },
+    ];
+
   
     const samples = activeTab === "product"
         ? productSamples
         : activeTab === "fabrication"
             ? fabricationSamples
-            : rubberSamples;
+            : activeTab === "rubber"
+            ? rubberSamples
+            : activeTab === "civil"
+            ? civilServices
+            : [];
 
 
     return (
@@ -115,11 +163,12 @@ const SampleProducts = () => {
                             </h1>
 
                             
-                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 p-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-2 p-2 bg-white/10 backdrop-blur-md rounded-xl shadow-lg">
                                 {[
                                     { key: "product", label: "Product Samples" },
                                     { key: "fabrication", label: "Fabrication/Facilities" },
                                     { key: "rubber", label: "Rubber Samples" },
+                                    { key: "civil", label: "Civil/Construction Services" },
                                 ].map(({ key, label }) => (
                                     <button
                                         key={key}
